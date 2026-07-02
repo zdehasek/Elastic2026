@@ -175,6 +175,11 @@ html:not(.dark-mode) body.task-login .form-control {
   border-radius: 8px;
 }
 
+html:not(.dark-mode) body.task-login .brand-login-fields {
+  display: grid;
+  gap: 14px;
+}
+
 html:not(.dark-mode) body.task-login .formbuttons {
   margin-top: 4px;
 }

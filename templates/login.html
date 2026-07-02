@@ -5,7 +5,17 @@
 <div id="layout-content" class="selected no-navbar" role="main">
 	<roundcube:object name="logo" src="/images/logo.svg" id="logo" alt="Logo" />
 	<roundcube:form id="login-form" name="login-form" method="post" class="propform">
-	<roundcube:object name="loginform" form="login-form" size="40" submit=true class="form-control" />
+		<input type="hidden" name="_task" value="login" />
+		<input type="hidden" name="_action" value="login" />
+		<input type="hidden" name="_timezone" id="rcmlogintz" value="_default_" />
+		<input type="hidden" name="_url" id="rcmloginurl" value="" />
+		<div class="brand-login-fields">
+			<label for="rcmloginuser" class="voice"><roundcube:label name="username" /></label>
+			<input name="_user" id="rcmloginuser" required size="40" class="form-control" autocapitalize="off" autocomplete="username" placeholder="<roundcube:label name='username' />" type="text" />
+			<label for="rcmloginpwd" class="voice"><roundcube:label name="password" /></label>
+			<input name="_pass" id="rcmloginpwd" required size="40" class="form-control" autocapitalize="off" autocomplete="current-password" placeholder="<roundcube:label name='password' />" type="password" />
+		</div>
+		<p class="formbuttons"><button type="submit" id="rcmloginsubmit" class="button mainaction submit"><roundcube:label name="login" /></button></p>
 		<div id="login-footer" role="contentinfo">
 			<roundcube:object name="version" condition="config:display_product_info == 2" />
 			<roundcube:if condition="config:support_url" />
