@@ -145,27 +145,42 @@ html:not(.dark-mode) body.task-login #logo {
 }
 
 html:not(.dark-mode) body.task-login table,
-html:not(.dark-mode) body.task-login tbody,
-html:not(.dark-mode) body.task-login tr,
-html:not(.dark-mode) body.task-login td {
-  display: block;
+html:not(.dark-mode) body.task-login tbody {
   width: 100%;
 }
 
+html:not(.dark-mode) body.task-login tr {
+  display: grid;
+  grid-template-columns: 44px minmax(0, 1fr);
+  align-items: stretch;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
 html:not(.dark-mode) body.task-login td.title {
-  padding: 0 0 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  min-height: 48px;
+  padding: 0;
   color: var(--brand-ink-soft);
-  font-size: .86rem;
-  font-weight: 700;
+  background: #fffefa;
+  border: 1px solid var(--brand-line);
+  border-right: 0;
+  border-radius: 8px 0 0 8px;
 }
 
 html:not(.dark-mode) body.task-login td.input {
-  padding: 0 0 16px;
+  display: block;
+  min-width: 0;
+  padding: 0;
 }
 
 html:not(.dark-mode) body.task-login .form-control {
+  width: 100%;
   min-height: 48px;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
 }
 
 html:not(.dark-mode) body.task-login .formbuttons {
