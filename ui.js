@@ -5337,20 +5337,28 @@ var url = href.substring(0, href.lastIndexOf('/')) + "/";
 
 var cleantitle = document.title.split(" ::")[0]
 if(cleantitle.includes(")"))cleantitle=cleantitle.split(") ")[1]
+if(!cleantitle.trim()) cleantitle = "66c Mail"
+
+var skinUrl = url + "static.php/skins/elastic2026";
 
 var myDynamicManifest = {
   "name": cleantitle,
-  "theme_color": $('meta[name="theme-color"]').attr('content'),
-  "start_url": url,
+  "short_name": "66c Mail",
+  "description": "66c webmail",
+  "id": url + "?_task=mail",
+  "theme_color": $('meta[name="theme-color"]').attr('content') || "#172126",
+  "background_color": "#172126",
+  "start_url": url + "?_task=mail",
+  "scope": url,
   "icons": [{
-    "src": url+"/skins/elastic2022/images/rc192x192.png",
+    "src": skinUrl + "/images/rc192x192.png",
 	"sizes": "192x192",
-	"purpose": "maskable",
-	"purpose": "any"},{
-	"src": url+"/skins/elastic2022/images/rc512x512.png",
+	"type": "image/png",
+	"purpose": "any maskable"},{
+	"src": skinUrl + "/images/pwa.png",
 	"sizes": "512x512",
-	"purpose": "maskable",
-	"purpose": "any"
+	"type": "image/png",
+	"purpose": "any maskable"
   }],
   "display": "standalone",
 }
@@ -5365,6 +5373,13 @@ reader.onload = function(){
 	link.href = reader.result
     link.rel = 'manifest';
 	document.getElementsByTagName('head')[0].appendChild(link);
+
+	if(!document.querySelector('link[rel="apple-touch-icon"]')) {
+		var apple = document.createElement('link');
+		apple.rel = 'apple-touch-icon';
+		apple.href = skinUrl + '/images/pwa.png';
+		document.getElementsByTagName('head')[0].appendChild(apple);
+	}
 	}
 }
 
