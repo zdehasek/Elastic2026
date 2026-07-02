@@ -146,14 +146,14 @@ html:not(.dark-mode) body.task-login #logo {
 
 html:not(.dark-mode) body.task-login table,
 html:not(.dark-mode) body.task-login tbody {
-  width: 100%;
+  display: block !important;
+  width: 100% !important;
 }
 
 html:not(.dark-mode) body.task-login tr {
-  display: grid;
-  grid-template-columns: 44px minmax(0, 1fr);
+  display: flex !important;
   align-items: stretch;
-  width: 100%;
+  width: 100% !important;
   margin-bottom: 14px;
 }
 
@@ -172,14 +172,18 @@ html:not(.dark-mode) body.task-login td.title {
 }
 
 html:not(.dark-mode) body.task-login td.input {
-  display: block;
+  display: block !important;
+  flex: 1 1 auto;
+  width: auto !important;
   min-width: 0;
   padding: 0;
 }
 
 html:not(.dark-mode) body.task-login .form-control {
-  width: 100%;
+  width: 100% !important;
+  max-width: none !important;
   min-height: 48px;
+  box-sizing: border-box;
   border-radius: 0 8px 8px 0;
 }
 
