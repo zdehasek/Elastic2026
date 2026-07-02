@@ -468,34 +468,56 @@ html body.task-login #layout-content,
 html.dark-mode body.task-login #layout-content {
   display: grid;
   justify-items: center;
-  gap: 18px;
+  align-content: center;
+  gap: 22px;
+  width: min(430px, calc(100vw - 32px)) !important;
+  min-height: 100vh;
+  margin: 0 auto !important;
+  padding: 28px 0;
+  text-align: center;
   background: transparent !important;
-  transform: translateY(-3vh) !important;
+  transform: translateY(-2vh) !important;
 }
 
 html body.task-login #logo,
 html.dark-mode body.task-login #logo {
-  width: min(218px, 56vw) !important;
+  position: static !important;
+  top: auto !important;
+  width: min(190px, 52vw) !important;
   height: auto;
-  margin: 0 0 12px;
+  max-height: none !important;
+  margin: 0;
   filter: drop-shadow(0 22px 34px rgba(0, 0, 0, .34));
 }
 
 html body.task-login #login-form,
 html.dark-mode body.task-login #login-form {
-  width: min(430px, calc(100vw - 32px)) !important;
-  padding: 0 !important;
+  position: static !important;
+  top: auto !important;
+  width: 100% !important;
+  max-width: 430px !important;
+  padding: 18px !important;
   color: var(--brand-ink);
-  background: transparent;
-  border: 0;
-  box-shadow: none;
+  background: rgba(31, 39, 53, .82);
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 8px;
+  box-shadow: 0 22px 54px rgba(0, 0, 0, .28);
   transform: none !important;
+  backdrop-filter: blur(14px);
+}
+
+html body.task-login .brand-login-fields,
+html.dark-mode body.task-login .brand-login-fields {
+  display: grid !important;
+  gap: 12px;
 }
 
 html body.task-login .form-control,
 html.dark-mode body.task-login .form-control {
   width: 100% !important;
+  max-width: none !important;
   min-height: 50px;
+  box-sizing: border-box;
   border-radius: 8px !important;
   background: #202838;
   border-color: #435068;
@@ -511,11 +533,18 @@ html body.task-login .button.mainaction,
 html.dark-mode body.task-login .button.mainaction {
   width: 100% !important;
   min-height: 50px;
+  box-sizing: border-box;
   border-radius: 8px !important;
   font-weight: 800;
   background: linear-gradient(135deg, #8068f2, #ff5c72);
   border: 0;
   box-shadow: 0 14px 28px rgba(127, 104, 242, .3);
+}
+
+html body.task-login .formbuttons,
+html.dark-mode body.task-login .formbuttons {
+  width: 100% !important;
+  margin: 14px 0 0 !important;
 }
 
 html .messagelist tr,
@@ -619,12 +648,14 @@ html.dark-mode .watermark:before {
 @media (max-width: 560px) {
   html body.task-login #layout-content,
   html.dark-mode body.task-login #layout-content {
-    transform: translateY(-1vh);
+    width: min(390px, calc(100vw - 28px)) !important;
+    gap: 18px;
+    transform: none !important;
   }
 
   html body.task-login #logo,
   html.dark-mode body.task-login #logo {
-    width: min(188px, 58vw) !important;
+    width: min(164px, 52vw) !important;
   }
 }
 
