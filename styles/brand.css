@@ -231,7 +231,7 @@ html:not(.dark-mode) body.task-calendar .ui-datepicker-inline .ui-datepicker-tod
 
 html:not(.dark-mode) .watermark {
   background-color: var(--brand-paper-2);
-  background-image: url(../images/logo.svg);
+  background-image: url(../images/logo-ai.png);
   background-size: 172px;
   background-blend-mode: normal;
 }

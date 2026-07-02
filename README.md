@@ -4,6 +4,8 @@ A public fork of [Elastic2025](https://github.com/bijanbina/Elastic2025), which 
 
 This fork keeps the original attribution and CC BY-SA 3.0 licensing, while serving as the custom Roundcube skin used for `mail.66c.dev`.
 
+Elastic2026 also replaces the default Roundcube mark with an AI-generated space-like cube/mail logo for the custom webmail identity. The source prompt asked for a new cool space-like twist on the Roundcube logo.
+
 ## [**DONATE**](https://www.paypal.com/donate/?hosted_button_id=N9LJWC4WH8ZJC) so we don't die. any amount help!
 
 <a href="https://www.paypal.com/donate/?hosted_button_id=N9LJWC4WH8ZJC">
