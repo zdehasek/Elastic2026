@@ -720,6 +720,7 @@ if(rcmail.env.action=="preview")
 						
 						redraw_cubeselect()
 						rcmail.message_list.addEventListener('select', redraw_cubeselect)
+						e2026_mobile_open_message_on_tap()
 						
 						//prevent ugly bottom popup when delete email
 						rcmail.addEventListener('actionafter', function(e) {if(e.action=="delete"){	hide_messagestack_few_secs()}})
@@ -1021,14 +1022,14 @@ if(rcmail.env.action=="preview")
             },
             switch_color_mode = function() {
                 if (color_mode == 'dark') {
-                    $('#taskmenu a.theme').removeClass('dark').addClass('light').find('span').text(rcmail.gettext('lightmode'));
+                    $('#taskmenu a.theme, .brand-taskrail a.theme').removeClass('dark').addClass('light').find('span').text(rcmail.gettext('lightmode'));
 					$('.click_change_theme').removeClass('dark').addClass('light').find('span')
 					$('.sebicon_contrast_txt').text(rcmail.gettext('lightmode'));
                     $('html').addClass('dark-mode');
 					$('meta[name="theme-color"]').attr('content', '#1A1C1E')
                 }
                 else {
-                    $('#taskmenu a.theme').removeClass('light').addClass('dark').find('span').text(rcmail.gettext('darkmode'));
+                    $('#taskmenu a.theme, .brand-taskrail a.theme').removeClass('light').addClass('dark').find('span').text(rcmail.gettext('darkmode'));
 					$('.click_change_theme').removeClass('light').addClass('dark').find('span')
 					$('.sebicon_contrast_txt').text(rcmail.gettext('darkmode'));
                     $('html').removeClass('dark-mode');
@@ -1049,7 +1050,7 @@ if(rcmail.env.action=="preview")
         }
 
         // Add onclick action to the menu button
-        $('#taskmenu a.theme').on('click', function() {
+        $('#taskmenu a.theme, .brand-taskrail a.theme').on('click', function() {
             color_mode = $(this).is('.dark') ? 'dark' : 'light';
             switch_color_mode();
             rcmail.set_cookie('colorMode', color_mode, false);
@@ -4847,6 +4848,122 @@ function change_contactphoto_by_divLetter()
     contactphoto.style.display="none";
 }
 
+function e2026_mobile_open_message_on_tap()
+{
+	if(!rcmail || rcmail.task != "mail" || !rcmail.message_list || !document.getElementById("messagelist")) return;
+	if(document.getElementById("messagelist").dataset.e2026TapOpen == "1") return;
+
+	var list = document.getElementById("messagelist");
+	var start = null;
+	var lastOpen = {uid: null, ts: 0};
+
+	function isSmallMailList()
+	{
+		return document.documentElement.classList.contains("layout-small")
+			&& document.body.classList.contains("task-mail")
+			&& document.body.classList.contains("action-none");
+	}
+
+	function rowFromEvent(event)
+	{
+		var target = event.target;
+		if(!target || target.closest(".selection, .flag, .attachment, .threads, input, button, .button, .treetoggle")) return null;
+		return target.closest("#messagelist tr.message");
+	}
+
+	function isRowContentEvent(event)
+	{
+		return isSmallMailList() && rowFromEvent(event);
+	}
+
+	function rememberStart(event)
+	{
+		var point = event.touches ? event.touches[0] : event;
+		if(!point) return;
+
+		start = {
+			x: point.clientX,
+			y: point.clientY,
+			ts: Date.now()
+		};
+	}
+
+	function isTap(event)
+	{
+		var point;
+
+		if(!start) return false;
+
+		point = event.changedTouches ? event.changedTouches[0] : event;
+		if(!point) return false;
+
+		var dx = Math.abs(point.clientX - start.x);
+		var dy = Math.abs(point.clientY - start.y);
+		var dt = Date.now() - start.ts;
+
+		start = null;
+
+		return dx <= 12 && dy <= 12 && dt <= 700;
+	}
+
+	function openRow(row, event)
+	{
+		if(!isSmallMailList() || !row) return;
+
+		var uid = row.uid || row.dataset.uid || (rcmail.message_list && rcmail.message_list.get_row_uid ? rcmail.message_list.get_row_uid(row) : null);
+		if(!uid) return;
+
+		var now = Date.now();
+		if(lastOpen.uid == uid && now - lastOpen.ts < 700) return;
+		lastOpen = {uid: uid, ts: now};
+
+		event.preventDefault();
+		event.stopPropagation();
+
+		if(rcmail.message_list.select_row) {
+			rcmail.message_list.select_row(uid, false, true);
+		}
+
+		setTimeout(function() {
+			rcmail.show_message(uid);
+		}, 0);
+	}
+
+	list.addEventListener("pointerdown", function(event) {
+		if(event.pointerType == "mouse" || !isRowContentEvent(event)) return;
+		rememberStart(event);
+		event.stopPropagation();
+	}, true);
+
+	list.addEventListener("pointerup", function(event) {
+		if(event.pointerType == "mouse" || !isTap(event)) return;
+		openRow(rowFromEvent(event), event);
+	}, true);
+
+	list.addEventListener("mousedown", function(event) {
+		if(isRowContentEvent(event)) event.stopPropagation();
+	}, true);
+
+	list.addEventListener("touchstart", function(event) {
+		if(event.touches.length != 1 || !isRowContentEvent(event)) return;
+		rememberStart(event);
+		event.stopPropagation();
+	}, {capture: true, passive: true});
+
+	list.addEventListener("touchend", function(event) {
+		if(!start || event.changedTouches.length != 1) return;
+
+		if(!isTap(event)) return;
+		openRow(rowFromEvent(event), event);
+	}, {capture: true, passive: false});
+
+	list.addEventListener("click", function(event) {
+		openRow(rowFromEvent(event), event);
+	}, true);
+
+	list.dataset.e2026TapOpen = "1";
+}
+
 function flag_click()
 {
 if(window.frameElement) // is iframe
@@ -5337,28 +5454,20 @@ var url = href.substring(0, href.lastIndexOf('/')) + "/";
 
 var cleantitle = document.title.split(" ::")[0]
 if(cleantitle.includes(")"))cleantitle=cleantitle.split(") ")[1]
-if(!cleantitle.trim()) cleantitle = "66c Mail"
-
-var skinUrl = url + "static.php/skins/elastic2026";
 
 var myDynamicManifest = {
   "name": cleantitle,
-  "short_name": "66c Mail",
-  "description": "66c webmail",
-  "id": url + "?_task=mail",
-  "theme_color": $('meta[name="theme-color"]').attr('content') || "#172126",
-  "background_color": "#172126",
-  "start_url": url + "?_task=mail",
-  "scope": url,
+  "theme_color": $('meta[name="theme-color"]').attr('content'),
+  "start_url": url,
   "icons": [{
-    "src": skinUrl + "/images/rc192x192.png",
+    "src": url+"/skins/elastic2022/images/rc192x192.png",
 	"sizes": "192x192",
-	"type": "image/png",
-	"purpose": "any maskable"},{
-	"src": skinUrl + "/images/pwa.png",
+	"purpose": "maskable",
+	"purpose": "any"},{
+	"src": url+"/skins/elastic2022/images/rc512x512.png",
 	"sizes": "512x512",
-	"type": "image/png",
-	"purpose": "any maskable"
+	"purpose": "maskable",
+	"purpose": "any"
   }],
   "display": "standalone",
 }
@@ -5373,13 +5482,6 @@ reader.onload = function(){
 	link.href = reader.result
     link.rel = 'manifest';
 	document.getElementsByTagName('head')[0].appendChild(link);
-
-	if(!document.querySelector('link[rel="apple-touch-icon"]')) {
-		var apple = document.createElement('link');
-		apple.rel = 'apple-touch-icon';
-		apple.href = skinUrl + '/images/pwa.png';
-		document.getElementsByTagName('head')[0].appendChild(apple);
-	}
 	}
 }
 
