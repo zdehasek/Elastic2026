@@ -2009,3 +2009,88 @@ html.dark-mode body.task-login .button.mainaction {
   background: linear-gradient(135deg, #8068f2 0%, #ff5c72 100%) !important;
   box-shadow: 0 14px 28px rgba(0, 0, 0, .22) !important;
 }
+
+/* Keep mail rows readable after the shell sidebar width changes. */
+html body.task-mail.action-none #messagelist {
+  width: 100% !important;
+  table-layout: fixed !important;
+}
+
+html body.task-mail.action-none #messagelist tr.message {
+  height: 58px !important;
+}
+
+html body.task-mail.action-none #messagelist td.selection {
+  width: 34px !important;
+  min-width: 34px !important;
+  max-width: 34px !important;
+}
+
+html body.task-mail.action-none #messagelist td.subject {
+  display: grid !important;
+  grid-template-columns: minmax(0, 1fr) auto !important;
+  grid-template-rows: 24px 24px !important;
+  column-gap: 12px !important;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 5px 8px !important;
+  overflow: hidden !important;
+}
+
+html body.task-mail.action-none #messagelist td.subject span.fromto,
+html body.task-mail.action-none #messagelist td.subject span.date,
+html body.task-mail.action-none #messagelist td.subject span.subject,
+html body.task-mail.action-none #messagelist td.subject span.subject a,
+html body.task-mail.action-none #messagelist td.subject span.subject span {
+  min-width: 0 !important;
+  max-width: 100% !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
+
+html body.task-mail.action-none #messagelist td.subject span.fromto {
+  grid-column: 1 !important;
+  grid-row: 1 !important;
+  width: auto !important;
+  padding-right: 0 !important;
+}
+
+html body.task-mail.action-none #messagelist td.subject span.date {
+  grid-column: 2 !important;
+  grid-row: 1 !important;
+  justify-self: end !important;
+  display: block !important;
+  width: auto !important;
+  padding-right: 0 !important;
+  line-height: 24px !important;
+}
+
+html body.task-mail.action-none #messagelist td.subject span.subject {
+  grid-column: 1 / 3 !important;
+  grid-row: 2 !important;
+  display: block !important;
+  width: auto !important;
+  padding-right: 0 !important;
+  line-height: 24px !important;
+}
+
+html body.task-mail.action-none #messagelist td.subject span.subject a {
+  display: inline-block !important;
+}
+
+html body.task-mail.action-none #messagelist tr:hover td.subject span.date {
+  display: block !important;
+}
+
+html body.task-mail.action-none #messagelist td.flags {
+  width: 34px !important;
+  min-width: 34px !important;
+  max-width: 34px !important;
+  padding: 0 !important;
+  text-align: center !important;
+}
+
+html body.task-mail.action-none #messagelist td.flags > span {
+  margin-left: 0 !important;
+}
