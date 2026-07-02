@@ -133,15 +133,16 @@ html:not(.dark-mode) body.task-login #layout {
 html:not(.dark-mode) body.task-login #layout-content {
   display: grid;
   justify-items: center;
-  gap: 20px;
+  gap: 18px;
   background: transparent;
+  transform: translateY(-4vh);
 }
 
 html:not(.dark-mode) body.task-login #logo {
-  width: 142px;
+  width: 174px;
   height: auto;
-  margin: 0 0 8px;
-  filter: drop-shadow(0 18px 28px rgba(20, 32, 51, .18));
+  margin: 0 0 10px;
+  filter: drop-shadow(0 20px 34px rgba(20, 32, 51, .2));
 }
 
 html:not(.dark-mode) body.task-login table,
@@ -173,6 +174,7 @@ html:not(.dark-mode) body.task-login .form-control {
   min-height: 48px;
   box-sizing: border-box;
   border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(36, 29, 15, .06);
 }
 
 html:not(.dark-mode) body.task-login .brand-login-fields {
@@ -189,6 +191,7 @@ html:not(.dark-mode) body.task-login .button.mainaction {
   min-height: 48px;
   border-radius: 8px;
   font-weight: 800;
+  box-shadow: 0 10px 22px rgba(217, 58, 46, .22);
 }
 
 html:not(.dark-mode) .messagelist tr,
@@ -280,4 +283,14 @@ body.task-login #login-form .form-control {
   width: 100% !important;
   max-width: none !important;
   border-radius: 8px !important;
+}
+
+@media screen and (max-width: 480px) {
+  html:not(.dark-mode) body.task-login #layout-content {
+    transform: translateY(-2vh);
+  }
+
+  html:not(.dark-mode) body.task-login #logo {
+    width: 158px;
+  }
 }
