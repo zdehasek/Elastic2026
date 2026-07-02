@@ -1,0 +1,244 @@
+:root {
+  --brand-ink: #121927;
+  --brand-ink-soft: #243246;
+  --brand-paper: #fff7e8;
+  --brand-paper-2: #fffdf7;
+  --brand-line: #eadfcb;
+  --brand-coral: #ff5c42;
+  --brand-coral-dark: #d93a2e;
+  --brand-amber: #ffd65a;
+  --brand-mint: #2aa876;
+  --brand-focus: #ff8a5b;
+  --brand-shadow: 0 16px 44px rgba(36, 29, 15, .12);
+}
+
+html:not(.dark-mode),
+html:not(.dark-mode) body {
+  color: var(--brand-ink);
+  background: var(--brand-paper);
+}
+
+html:not(.dark-mode) #layout,
+html:not(.dark-mode) #layout-content,
+html:not(.dark-mode) #layout-list,
+html:not(.dark-mode) #layout-sidebar,
+html:not(.dark-mode) .listbox,
+html:not(.dark-mode) .scroller,
+html:not(.dark-mode) .iframe-wrapper {
+  background-color: var(--brand-paper);
+}
+
+html:not(.dark-mode) .header,
+html:not(.dark-mode) #messagelist-header,
+html:not(.dark-mode) .footer,
+html:not(.dark-mode) .popupmenu,
+html:not(.dark-mode) .popover,
+html:not(.dark-mode) .ui-dialog,
+html:not(.dark-mode) .formcontent,
+html:not(.dark-mode) .propform {
+  color: var(--brand-ink);
+  background-color: var(--brand-paper-2);
+  border-color: var(--brand-line);
+}
+
+html:not(.dark-mode) #layout-menu,
+html:not(.dark-mode) #taskmenu,
+html:not(.dark-mode) #layout-sidebar {
+  background: #142033;
+  color: #fff8eb;
+}
+
+html:not(.dark-mode) #layout-sidebar .header,
+html:not(.dark-mode) #layout-sidebar .scroller,
+html:not(.dark-mode) #layout-sidebar .listing,
+html:not(.dark-mode) #layout-sidebar .listing li,
+html:not(.dark-mode) #layout-sidebar .listing li > a,
+html:not(.dark-mode) #layout-sidebar .listing li > div > a,
+html:not(.dark-mode) #layout-sidebar .listing li > div > span,
+html:not(.dark-mode) #layout-sidebar .footer {
+  background: transparent;
+  color: #fff8eb;
+  border-color: rgba(255, 248, 235, .12);
+}
+
+html:not(.dark-mode) #layout-sidebar .listing li.selected > a,
+html:not(.dark-mode) #layout-sidebar .listing li.selected > div > *,
+html:not(.dark-mode) #layout-sidebar .listing li:hover > a,
+html:not(.dark-mode) #layout-sidebar .listing li:hover > div > * {
+  color: #142033;
+  background: var(--brand-amber);
+}
+
+html:not(.dark-mode) a,
+html:not(.dark-mode) .button,
+html:not(.dark-mode) .btn-link {
+  color: var(--brand-coral-dark);
+}
+
+html:not(.dark-mode) .btn-primary,
+html:not(.dark-mode) button.mainaction,
+html:not(.dark-mode) .button.mainaction,
+html:not(.dark-mode) a.compose.button,
+html:not(.dark-mode) .toolbar a.button.create,
+html:not(.dark-mode) .fc button.fc-state-active,
+html:not(.dark-mode) .fc button.fc-state-hover {
+  color: #fff8eb;
+  background: var(--brand-coral);
+  border-color: var(--brand-coral);
+}
+
+html:not(.dark-mode) .btn-primary:hover,
+html:not(.dark-mode) button.mainaction:hover,
+html:not(.dark-mode) .button.mainaction:hover,
+html:not(.dark-mode) a.compose.button:hover {
+  background: var(--brand-coral-dark);
+  border-color: var(--brand-coral-dark);
+}
+
+html:not(.dark-mode) input,
+html:not(.dark-mode) textarea,
+html:not(.dark-mode) select,
+html:not(.dark-mode) .form-control,
+html:not(.dark-mode) .custom-select,
+html:not(.dark-mode) .input-group-text {
+  color: var(--brand-ink);
+  background: #fffefa;
+  border-color: var(--brand-line);
+}
+
+html:not(.dark-mode) input:focus,
+html:not(.dark-mode) textarea:focus,
+html:not(.dark-mode) select:focus,
+html:not(.dark-mode) .form-control:focus {
+  border-color: var(--brand-focus);
+  box-shadow: 0 0 0 .18rem rgba(255, 92, 66, .18);
+}
+
+html:not(.dark-mode) #login-form {
+  width: min(440px, calc(100vw - 32px));
+  padding: 0;
+  color: var(--brand-ink);
+}
+
+html:not(.dark-mode) body.task-login #layout {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 12%, rgba(255, 214, 90, .35), transparent 34%),
+    radial-gradient(circle at 84% 18%, rgba(255, 92, 66, .18), transparent 30%),
+    linear-gradient(135deg, #fffdf7 0%, #fff2d4 100%);
+}
+
+html:not(.dark-mode) body.task-login #layout-content {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  background: transparent;
+}
+
+html:not(.dark-mode) body.task-login #logo {
+  width: 142px;
+  height: auto;
+  margin: 0 0 8px;
+  filter: drop-shadow(0 18px 28px rgba(20, 32, 51, .18));
+}
+
+html:not(.dark-mode) body.task-login table,
+html:not(.dark-mode) body.task-login tbody,
+html:not(.dark-mode) body.task-login tr,
+html:not(.dark-mode) body.task-login td {
+  display: block;
+  width: 100%;
+}
+
+html:not(.dark-mode) body.task-login td.title {
+  padding: 0 0 7px;
+  color: var(--brand-ink-soft);
+  font-size: .86rem;
+  font-weight: 700;
+}
+
+html:not(.dark-mode) body.task-login td.input {
+  padding: 0 0 16px;
+}
+
+html:not(.dark-mode) body.task-login .form-control {
+  min-height: 48px;
+  border-radius: 8px;
+}
+
+html:not(.dark-mode) body.task-login .formbuttons {
+  margin-top: 4px;
+}
+
+html:not(.dark-mode) body.task-login .button.mainaction {
+  width: 100%;
+  min-height: 48px;
+  border-radius: 8px;
+  font-weight: 800;
+}
+
+html:not(.dark-mode) .messagelist tr,
+html:not(.dark-mode) .listing li,
+html:not(.dark-mode) .fc-unthemed td,
+html:not(.dark-mode) .fc-unthemed th {
+  border-color: var(--brand-line);
+}
+
+html:not(.dark-mode) .messagelist tr:hover,
+html:not(.dark-mode) .messagelist tr.focused,
+html:not(.dark-mode) .messagelist tr.selected,
+html:not(.dark-mode) .listing li.selected,
+html:not(.dark-mode) .listing li.selected > div > *,
+html:not(.dark-mode) .fc-highlight {
+  color: var(--brand-ink);
+  background: #fff0bd;
+}
+
+html:not(.dark-mode) .fc .fc-toolbar,
+html:not(.dark-mode) .fc .fc-header-toolbar,
+html:not(.dark-mode) .fc-view,
+html:not(.dark-mode) .fc-unthemed .fc-popover,
+html:not(.dark-mode) .ui-datepicker-inline {
+  background: var(--brand-paper-2);
+  border-color: var(--brand-line);
+}
+
+html:not(.dark-mode) .fc-event,
+html:not(.dark-mode) .fc-event-dot,
+html:not(.dark-mode) .calendar-agenda-preview .event-row:before {
+  background: var(--brand-coral);
+  border-color: var(--brand-coral-dark);
+}
+
+html:not(.dark-mode) .fc-today,
+html:not(.dark-mode) body.task-calendar .ui-datepicker-inline .ui-datepicker-today a {
+  background: rgba(255, 214, 90, .32) !important;
+}
+
+html:not(.dark-mode) .watermark {
+  background-color: var(--brand-paper-2);
+  background-image: url(../images/logo.svg);
+  background-size: 172px;
+  background-blend-mode: normal;
+}
+
+html:not(.dark-mode) .watermark:before {
+  background: rgba(255, 247, 232, .78);
+}
+
+html.dark-mode {
+  --brand-coral: #ff7357;
+  --brand-amber: #ffd65a;
+}
+
+html.dark-mode #logo {
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, .3));
+}
+
+html.dark-mode .fc-event,
+html.dark-mode .fc-event-dot {
+  background: var(--brand-coral);
+  border-color: #ff9b82;
+}

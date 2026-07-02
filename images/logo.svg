@@ -1,11 +1,23 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="9.14 141.8 573.65 573.65">
-  <style>
-    .st0,.st3{fill-rule:evenodd;clip-rule:evenodd;fill:#404f54}.st3{fill:#37beff}
-  </style>
-  <path class="st3" d="M582.79 549.77L295.96 384.1V207.27l286.83 165.68z"/>
-  <path class="st0" d="M9.14 549.77L295.96 384.1V207.27L9.14 372.95z"/>
-  <path d="M295.96 141.8c109.56 0 198.41 88.85 198.41 198.41s-88.85 198.41-198.41 198.41S97.55 449.77 97.55 340.21 186.4 141.8 295.96 141.8" fill-rule="evenodd" clip-rule="evenodd" fill="#ccc"/>
-  <path d="M295.96 141.8c109.6 0 198.48 88.85 198.48 198.41s-88.88 198.41-198.48 198.41c-62.91-42.34-88.94-127.64-88.94-198.3s26.03-156.1 88.94-198.52" fill-rule="evenodd" clip-rule="evenodd" fill="#e5e5e5"/>
-  <path class="st3" d="M582.79 372.95L295.96 538.62v176.83l286.83-165.68z"/>
-  <path class="st0" d="M9.14 372.95l286.82 165.67v176.83L9.14 549.77z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" role="img" aria-label="66c.dev Mail">
+  <defs>
+    <linearGradient id="env" x1="92" x2="548" y1="500" y2="205" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#0f1f2e"/>
+      <stop offset="1" stop-color="#193853"/>
+    </linearGradient>
+    <linearGradient id="coral" x1="145" x2="501" y1="183" y2="421" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ff7357"/>
+      <stop offset="1" stop-color="#ff3f35"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="237" x2="403" y1="175" y2="392" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe77a"/>
+      <stop offset="1" stop-color="#ffba2d"/>
+    </linearGradient>
+  </defs>
+  <path fill="url(#env)" d="M112 255c0-40 32-72 72-72h272c40 0 72 32 72 72v166c0 40-32 72-72 72H184c-40 0-72-32-72-72V255z"/>
+  <path fill="#fff8eb" d="M131 236c13-31 43-53 78-53h222c35 0 65 22 78 53L331 379a18 18 0 0 1-22 0L131 236z"/>
+  <path fill="url(#coral)" d="M157 223c11-12 27-20 45-20h236c18 0 34 8 45 20L329 346a14 14 0 0 1-18 0L157 223z"/>
+  <path fill="#fff8eb" d="m128 462 143-119 32 26-134 104c-16-5-30-17-41-11zm384 0L369 343l-32 26 134 104c16-5 30-17 41-11z" opacity=".95"/>
+  <path fill="url(#sun)" d="M320 154a140 140 0 0 1 132 94h-47a96 96 0 0 0-170 0h-47a140 140 0 0 1 132-94z"/>
+  <path fill="#fff8eb" d="M302 121h36v111h-36V121zm-88 38 31-18 55 96-31 18-55-96zm212 0-31-18-55 96 31 18 55-96z" opacity=".92"/>
+  <path fill="url(#coral)" d="M228 175c37 0 67 30 67 67s-30 67-67 67-67-30-67-67 30-67 67-67zm0 42a25 25 0 1 0 0 50 25 25 0 0 0 0-50zm184-42c37 0 67 30 67 67s-30 67-67 67-67-30-67-67 30-67 67-67zm0 42a25 25 0 1 0 0 50 25 25 0 0 0 0-50z"/>
 </svg>
