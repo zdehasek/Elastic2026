@@ -1636,7 +1636,18 @@ html body.task-mail.action-none #layout-sidebar .listing li {
 }
 
 html body.task-mail.action-none #layout-sidebar .brand-taskrail {
-  display: none !important;
+  position: absolute !important;
+  inset: auto 12px 14px 12px !important;
+  z-index: 5 !important;
+  display: grid !important;
+  width: auto !important;
+  min-width: 0 !important;
+  padding: 0 !important;
+  color: #d7e0ea !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  pointer-events: auto !important;
 }
 
 html body.task-mail.action-none #layout > .brand-taskrail {
@@ -1649,7 +1660,7 @@ html body.task-mail.action-none #layout > #layout-content {
 }
 
 html body.task-mail.action-none #layout > #layout-sidebar {
-  padding: 12px !important;
+  padding: 12px 12px 154px !important;
 }
 
 html body.task-mail.action-none #layout-sidebar > .header {
@@ -1743,10 +1754,108 @@ html body.task-mail.action-none #mailboxlist li.mailbox.focused > a::before {
 }
 
 html body.task-mail.action-none #layout-sidebar #quotadisplay,
-html body.task-mail.action-none #layout-sidebar .settings,
 html body.task-mail.action-none #layout-sidebar .logout,
-html body.task-mail.action-none #layout-sidebar #taskmenu {
+html body.task-mail.action-none #layout-sidebar .compose,
+html body.task-mail.action-none #layout-sidebar .mail,
+html body.task-mail.action-none #layout-sidebar .theme,
+html body.task-mail.action-none #layout-sidebar .about {
   display: none !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail .menu,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail #taskmenu {
+  display: grid !important;
+  width: 100% !important;
+  background: transparent !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail-main {
+  gap: 6px !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail-bottom {
+  display: none !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a {
+  display: flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  width: 100% !important;
+  min-height: 36px !important;
+  padding: 0 12px !important;
+  color: #d7e0ea !important;
+  line-height: 1.2 !important;
+  text-align: left !important;
+  text-decoration: none !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 7px !important;
+  box-shadow: none !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a:before {
+  width: 24px !important;
+  height: auto !important;
+  margin: 0 10px 0 0 !important;
+  color: inherit !important;
+  font-family: Icons !important;
+  font-size: 16px !important;
+  line-height: 1 !important;
+  text-align: center !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a .inner {
+  display: block !important;
+  color: inherit !important;
+  font-size: 13px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a:hover,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a:focus {
+  color: var(--brand-folder-green) !important;
+  background: #303a20 !important;
+  border-color: rgba(200, 255, 42, .28) !important;
+  outline: none !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.contacts:before {
+  content: "\f0c0" !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.calendar:before,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.button-calendar:before {
+  content: "\f073" !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.settings:before {
+  content: "\f013" !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.compose,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.mail,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.theme,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.about,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail a.logout,
+html body.task-mail.action-none #layout-sidebar .brand-taskrail .quota-widget {
+  display: none !important;
+}
+
+html body.task-mail.action-compose #layout > .brand-taskrail,
+html body.task-mail.action-compose #layout-sidebar .brand-taskrail,
+html.iframe body.task-mail.action-compose #layout > .brand-taskrail,
+html.iframe body.task-mail.action-compose #layout-sidebar .brand-taskrail {
+  display: none !important;
+}
+
+html body.task-mail.action-compose #layout > #layout-content,
+html body.task-mail.action-compose #layout > #layout-sidebar.sidebar-right,
+html.iframe body.task-mail.action-compose #layout > #layout-content,
+html.iframe body.task-mail.action-compose #layout > #layout-sidebar.sidebar-right {
+  margin-left: 0 !important;
 }
 
 /* Login should stay clean and quiet, matching the screenshot direction. */
