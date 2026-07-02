@@ -151,30 +151,18 @@ html:not(.dark-mode) body.task-login tbody {
 }
 
 html:not(.dark-mode) body.task-login tr {
-  display: flex !important;
-  align-items: stretch;
+  display: block !important;
   width: 100% !important;
   margin-bottom: 14px;
 }
 
 html:not(.dark-mode) body.task-login td.title {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  min-height: 48px;
-  padding: 0;
-  color: var(--brand-ink-soft);
-  background: #fffefa;
-  border: 1px solid var(--brand-line);
-  border-right: 0;
-  border-radius: 8px 0 0 8px;
+  display: none !important;
 }
 
 html:not(.dark-mode) body.task-login td.input {
   display: block !important;
-  flex: 1 1 auto;
-  width: auto !important;
+  width: 100% !important;
   min-width: 0;
   padding: 0;
 }
@@ -184,7 +172,7 @@ html:not(.dark-mode) body.task-login .form-control {
   max-width: none !important;
   min-height: 48px;
   box-sizing: border-box;
-  border-radius: 0 8px 8px 0;
+  border-radius: 8px;
 }
 
 html:not(.dark-mode) body.task-login .formbuttons {
