@@ -1656,7 +1656,7 @@ html body.task-mail.action-none #layout > .brand-taskrail {
 
 html body.task-mail.action-none #layout > #layout-list,
 html body.task-mail.action-none #layout > #layout-content {
-  margin-left: 292px !important;
+  margin-left: 0 !important;
 }
 
 html body.task-mail.action-none #layout > #layout-sidebar {
@@ -1856,6 +1856,30 @@ html body.task-mail.action-compose #layout > #layout-sidebar.sidebar-right,
 html.iframe body.task-mail.action-compose #layout > #layout-content,
 html.iframe body.task-mail.action-compose #layout > #layout-sidebar.sidebar-right {
   margin-left: 0 !important;
+}
+
+html body.task-addressbook #layout > .brand-taskrail,
+html body.task-calendar #layout > .brand-taskrail,
+html body.task-settings #layout > .brand-taskrail {
+  display: none !important;
+}
+
+html body.task-addressbook #layout > #layout-sidebar,
+html body.task-addressbook #layout > #layout-list,
+html body.task-addressbook #layout > #layout-content,
+html body.task-calendar #layout > #layout-sidebar,
+html body.task-calendar #layout > #layout-list,
+html body.task-calendar #layout > #layout-content,
+html body.task-settings #layout > #layout-sidebar,
+html body.task-settings #layout > #layout-list,
+html body.task-settings #layout > #layout-content {
+  margin-left: 0 !important;
+}
+
+html body.task-addressbook #layout > #layout-sidebar,
+html body.task-calendar #layout > #layout-sidebar,
+html body.task-settings #layout > #layout-sidebar {
+  padding-left: 0 !important;
 }
 
 /* Login should stay clean and quiet, matching the screenshot direction. */
