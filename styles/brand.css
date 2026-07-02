@@ -1547,7 +1547,7 @@ html body.task-mail.action-none #mailboxlist {
   display: block !important;
   width: 100% !important;
   margin: 0 !important;
-  padding: 12px 10px !important;
+  padding: 10px 0 !important;
   background: transparent !important;
   pointer-events: auto !important;
 }
@@ -1563,20 +1563,22 @@ html body.task-mail.action-none #mailboxlist li.mailbox > a {
   z-index: 3 !important;
   display: flex !important;
   align-items: center !important;
-  min-height: 40px !important;
-  padding: 9px 12px !important;
+  height: 44px !important;
+  min-height: 44px !important;
+  max-height: 44px !important;
+  padding: 0 14px !important;
   color: var(--brand-dark-muted) !important;
-  background: rgba(255, 255, 255, .035) !important;
-  border: 1px solid rgba(255, 255, 255, .08) !important;
-  border-radius: 8px !important;
+  background: transparent !important;
+  border: 1px solid transparent !important;
+  border-radius: 7px !important;
   box-shadow: none !important;
   pointer-events: auto !important;
 }
 
 html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox > a {
   color: var(--brand-light-muted) !important;
-  background: #ffffff !important;
-  border-color: var(--brand-light-line) !important;
+  background: transparent !important;
+  border-color: transparent !important;
 }
 
 html body.task-mail.action-none #mailboxlist li.mailbox.selected > a,
@@ -1585,7 +1587,7 @@ html body.task-mail.action-none #mailboxlist li.mailbox.focused > a {
   color: var(--brand-folder-green) !important;
   background: #303a20 !important;
   border-color: rgba(200, 255, 42, .4) !important;
-  box-shadow: inset 4px 0 0 var(--brand-folder-green) !important;
+  box-shadow: inset 3px 0 0 var(--brand-folder-green) !important;
 }
 
 html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox.selected > a,
@@ -1601,4 +1603,191 @@ html body.task-addressbook #directorylist li > a,
 html body.task-calendar #calendars-content li > a,
 html body.task-calendar #calendarslist li > a {
   border-radius: 8px !important;
+}
+
+/* Baseline polish from the last good mailbox panel screenshot. */
+html body.task-mail.action-none #layout > #layout-sidebar {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  left: 0 !important;
+  width: 292px !important;
+  min-width: 292px !important;
+  max-width: 292px !important;
+  margin-left: 0 !important;
+  color: var(--brand-dark-text) !important;
+  background: #172126 !important;
+  border-right: 1px solid rgba(255, 255, 255, .1) !important;
+}
+
+html:not(.dark-mode) body.task-mail.action-none #layout > #layout-sidebar {
+  color: #e7eef5 !important;
+  background: #172126 !important;
+  border-right-color: rgba(255, 255, 255, .1) !important;
+}
+
+html body.task-mail.action-none #layout-sidebar > .footer,
+html body.task-mail.action-none #layout-sidebar > .scroller,
+html body.task-mail.action-none #layout-sidebar .listing,
+html body.task-mail.action-none #layout-sidebar .listing li {
+  color: inherit !important;
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+html body.task-mail.action-none #layout-sidebar .brand-taskrail {
+  display: none !important;
+}
+
+html body.task-mail.action-none #layout > .brand-taskrail {
+  display: none !important;
+}
+
+html body.task-mail.action-none #layout > #layout-list,
+html body.task-mail.action-none #layout > #layout-content {
+  margin-left: 292px !important;
+}
+
+html body.task-mail.action-none #layout > #layout-sidebar {
+  padding: 12px !important;
+}
+
+html body.task-mail.action-none #layout-sidebar > .header {
+  display: block !important;
+  height: 48px !important;
+  margin: 0 0 18px !important;
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+html body.task-mail.action-none #layout-sidebar a.compose.button {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 100% !important;
+  height: 48px !important;
+  min-height: 48px !important;
+  padding: 0 16px !important;
+  color: #ffffff !important;
+  background: linear-gradient(135deg, #8068f2 0%, #ff5c72 100%) !important;
+  border: 0 !important;
+  border-radius: 2px !important;
+  box-shadow: 0 14px 24px rgba(0, 0, 0, .2) !important;
+}
+
+html body.task-mail.action-none #layout-sidebar a.compose.button > div {
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 10px !important;
+  color: inherit !important;
+  background: transparent !important;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  line-height: 1 !important;
+}
+
+html body.task-mail.action-none #layout-sidebar a.compose.button i {
+  color: inherit !important;
+  font-size: 18px !important;
+}
+
+html body.task-mail.action-none #folderlist-content,
+html body.task-mail.action-none #mailboxlist {
+  padding: 0 !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox > a {
+  color: #c7d2df !important;
+  font-size: 15px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox > a::before {
+  width: 24px !important;
+  margin-right: 10px !important;
+  color: inherit !important;
+  font-size: 18px !important;
+  text-align: center !important;
+  opacity: .95 !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox.sent > a,
+html body.task-mail.action-none #mailboxlist li.mailbox.drafts > a,
+html body.task-mail.action-none #mailboxlist li.mailbox.trash > a,
+html body.task-mail.action-none #mailboxlist li.mailbox.junk > a {
+  color: #d7e0ea !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox.selected > a,
+html body.task-mail.action-none #mailboxlist li.mailbox:hover > a,
+html body.task-mail.action-none #mailboxlist li.mailbox.focused > a,
+html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox.selected > a,
+html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox:hover > a,
+html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox.focused > a {
+  color: var(--brand-folder-green) !important;
+  background: #303a20 !important;
+  border-color: rgba(200, 255, 42, .36) !important;
+  box-shadow: inset 3px 0 0 var(--brand-folder-green) !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox.selected > a::before,
+html body.task-mail.action-none #mailboxlist li.mailbox:hover > a::before,
+html body.task-mail.action-none #mailboxlist li.mailbox.focused > a::before {
+  color: var(--brand-folder-green) !important;
+}
+
+html body.task-mail.action-none #layout-sidebar #quotadisplay,
+html body.task-mail.action-none #layout-sidebar .settings,
+html body.task-mail.action-none #layout-sidebar .logout,
+html body.task-mail.action-none #layout-sidebar #taskmenu {
+  display: none !important;
+}
+
+/* Login should stay clean and quiet, matching the screenshot direction. */
+html body.task-login #layout,
+html:not(.dark-mode) body.task-login #layout,
+html.dark-mode body.task-login #layout {
+  background: #172126 !important;
+}
+
+html body.task-login #layout-content,
+html:not(.dark-mode) body.task-login #layout-content,
+html.dark-mode body.task-login #layout-content {
+  gap: 24px !important;
+  width: min(380px, calc(100vw - 32px)) !important;
+  transform: none !important;
+}
+
+html body.task-login #login-form,
+html:not(.dark-mode) body.task-login #login-form,
+html.dark-mode body.task-login #login-form {
+  padding: 0 !important;
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+html body.task-login .form-control,
+html:not(.dark-mode) body.task-login .form-control,
+html.dark-mode body.task-login .form-control {
+  min-height: 52px !important;
+  color: #eef5fb !important;
+  background: #202b39 !important;
+  border-color: #354255 !important;
+  box-shadow: none !important;
+}
+
+html body.task-login .button.mainaction,
+html:not(.dark-mode) body.task-login .button.mainaction,
+html.dark-mode body.task-login .button.mainaction {
+  min-height: 52px !important;
+  background: linear-gradient(135deg, #8068f2 0%, #ff5c72 100%) !important;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, .22) !important;
 }
