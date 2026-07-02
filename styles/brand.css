@@ -600,6 +600,57 @@ html.dark-mode .toolbar {
   border-color: var(--brand-line);
 }
 
+html #messagelist,
+html #messagelist-content,
+html .messagelist,
+html .messagelist tbody,
+html.dark-mode #messagelist,
+html.dark-mode #messagelist-content,
+html.dark-mode .messagelist,
+html.dark-mode .messagelist tbody {
+  color: var(--brand-ink);
+  background: var(--brand-paper);
+}
+
+html.iframe body.task-mail.action-preview #layout-content,
+html.iframe body.task-mail.action-preview .content,
+html.iframe body.task-mail.action-preview #message-content,
+html.iframe body.task-mail.action-preview #messagebody,
+html.iframe body.task-mail.action-preview .rightcol,
+html.iframe body.task-mail.action-preview .message-part {
+  color: #dbe4f0 !important;
+  background: var(--brand-paper) !important;
+}
+
+html.iframe body.task-mail.action-preview .content {
+  padding: 22px 26px !important;
+}
+
+html.iframe body.task-mail.action-preview #message-header > .subject {
+  color: #f4f6fb !important;
+  font-size: 20px;
+  font-weight: 700;
+  margin: 2px 0 14px;
+}
+
+html.iframe body.task-mail.action-preview #message-header > .header {
+  color: var(--brand-ink) !important;
+  background: #202836 !important;
+  border: 1px solid rgba(255, 255, 255, .08);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+html.iframe body.task-mail.action-preview #messagebody {
+  padding: 18px 18px 0 !important;
+}
+
+html.iframe body.task-mail.action-preview .message-part {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.65;
+}
+
 html .fc .fc-toolbar,
 html .fc .fc-header-toolbar,
 html .fc-view,
