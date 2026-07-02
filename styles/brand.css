@@ -2094,3 +2094,496 @@ html body.task-mail.action-none #messagelist td.flags {
 html body.task-mail.action-none #messagelist td.flags > span {
   margin-left: 0 !important;
 }
+
+/* Secondary app polish: make Contacts, Calendar, and Settings feel like the mail shell. */
+html body.task-addressbook,
+html body.task-calendar,
+html body.task-settings {
+  background: var(--brand-paper) !important;
+}
+
+html body.task-addressbook #layout,
+html body.task-calendar #layout,
+html body.task-settings #layout {
+  gap: 0 !important;
+  background: var(--brand-paper) !important;
+}
+
+html body.task-addressbook #layout > #layout-sidebar,
+html body.task-calendar #layout > #layout-sidebar,
+html body.task-settings #layout > #layout-sidebar {
+  width: 246px !important;
+  min-width: 246px !important;
+  max-width: 246px !important;
+  color: #edf4f8 !important;
+  background: #172126 !important;
+  border-right: 1px solid rgba(255, 255, 255, .08) !important;
+  box-shadow: none !important;
+}
+
+html body.task-addressbook #layout > #layout-list,
+html body.task-settings #layout > #layout-list {
+  width: 336px !important;
+  min-width: 336px !important;
+  max-width: 336px !important;
+  background: var(--brand-paper) !important;
+  border-right: 1px solid var(--brand-line) !important;
+}
+
+html body.task-addressbook #layout > #layout-content,
+html body.task-calendar #layout > #layout-content,
+html body.task-settings #layout > #layout-content {
+  position: relative !important;
+  background: var(--brand-paper) !important;
+  border-left: 0 !important;
+}
+
+html body.task-addressbook #layout-sidebar > .header,
+html body.task-calendar #layout-sidebar > .header,
+html body.task-settings #layout-sidebar > .header {
+  min-height: 58px !important;
+  height: 58px !important;
+  padding: 10px 12px !important;
+  background: #172126 !important;
+  border-bottom-color: rgba(255, 255, 255, .09) !important;
+}
+
+html body.task-addressbook #layout-sidebar > .header .header-title,
+html body.task-calendar #layout-sidebar > .header .header-title,
+html body.task-settings #layout-sidebar > .header .header-title {
+  color: #f4f8fb !important;
+  font-size: 15px !important;
+  font-weight: 800 !important;
+  text-align: left !important;
+}
+
+html body.task-addressbook #layout-sidebar .brand-back-mail,
+html body.task-calendar #layout-sidebar .brand-back-mail,
+html body.task-settings #layout-sidebar .brand-back-mail {
+  flex-basis: 36px !important;
+  width: 36px !important;
+  height: 36px !important;
+  min-height: 36px !important;
+  color: #d8e4ec !important;
+  background: rgba(255, 255, 255, .04) !important;
+  border-color: rgba(255, 255, 255, .1) !important;
+  border-radius: 8px !important;
+}
+
+html body.task-addressbook #layout-sidebar .brand-back-mail:hover,
+html body.task-addressbook #layout-sidebar .brand-back-mail:focus,
+html body.task-calendar #layout-sidebar .brand-back-mail:hover,
+html body.task-calendar #layout-sidebar .brand-back-mail:focus,
+html body.task-settings #layout-sidebar .brand-back-mail:hover,
+html body.task-settings #layout-sidebar .brand-back-mail:focus {
+  color: #142024 !important;
+  background: var(--brand-mint) !important;
+  border-color: var(--brand-mint) !important;
+}
+
+html body.task-addressbook #directorylist,
+html body.task-addressbook #savedsearchlist,
+html body.task-calendar #calendars-content,
+html body.task-calendar #calendarslist,
+html body.task-settings #settings-menu {
+  padding: 12px 10px !important;
+}
+
+html body.task-addressbook #directorylist li,
+html body.task-addressbook #savedsearchlist li,
+html body.task-calendar #calendarslist li,
+html body.task-settings #settings-menu li {
+  margin: 3px 0 !important;
+  border: 0 !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+html body.task-addressbook #directorylist li > a,
+html body.task-addressbook #savedsearchlist li > a,
+html body.task-calendar #calendarslist li > a,
+html body.task-settings #settings-menu li > a {
+  min-height: 38px !important;
+  padding: 9px 10px 9px 34px !important;
+  color: #dbe6ed !important;
+  border-radius: 8px !important;
+  background: transparent !important;
+}
+
+html body.task-addressbook #directorylist li.selected > a,
+html body.task-addressbook #directorylist li:hover > a,
+html body.task-addressbook #savedsearchlist li.selected > a,
+html body.task-addressbook #savedsearchlist li:hover > a,
+html body.task-calendar #calendarslist li.selected > a,
+html body.task-calendar #calendarslist li:hover > a,
+html body.task-settings #settings-menu li.selected > a,
+html body.task-settings #settings-menu li:hover > a {
+  color: #142024 !important;
+  background: var(--brand-mint) !important;
+  box-shadow: none !important;
+}
+
+html body.task-addressbook #layout-list > .header,
+html body.task-addressbook #layout-content > .header,
+html body.task-calendar #layout-content > .header,
+html body.task-settings #layout-list > .header,
+html body.task-settings #layout-content > .header {
+  min-height: 58px !important;
+  height: 58px !important;
+  padding: 10px 14px !important;
+  background: var(--brand-paper-2) !important;
+  border-bottom: 1px solid var(--brand-line) !important;
+}
+
+html body.task-addressbook #layout-list .tableheaderseb {
+  width: 100% !important;
+  height: 58px !important;
+  margin: 0 !important;
+  background: var(--brand-paper-2) !important;
+  border-bottom: 1px solid var(--brand-line) !important;
+}
+
+html body.task-addressbook #layout-list .tableheaderseb td {
+  padding: 10px 12px !important;
+  vertical-align: middle !important;
+}
+
+html body.task-addressbook #searchform,
+html body.task-calendar #searchform,
+html body.task-mail #mailsearchform {
+  min-width: 0 !important;
+}
+
+html body.task-addressbook #layout-list .searchbar,
+html body.task-calendar #layout-content .searchbar {
+  margin: 0 !important;
+}
+
+html body.task-addressbook #layout-list input,
+html body.task-calendar #layout-content input {
+  border-radius: 8px !important;
+}
+
+html body.task-addressbook #contacts-table,
+html body.task-addressbook #contacts-table tbody,
+html body.task-addressbook #contacts-table tr,
+html body.task-addressbook #contacts-table td {
+  background: transparent !important;
+}
+
+html body.task-addressbook #contacts-table {
+  width: calc(100% - 20px) !important;
+  margin: 10px !important;
+  border-collapse: separate !important;
+  border-spacing: 0 6px !important;
+}
+
+html body.task-addressbook #contacts-table tr {
+  height: 52px !important;
+  color: var(--brand-ink) !important;
+  background: var(--brand-panel) !important;
+  border-radius: 8px !important;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .04) inset !important;
+}
+
+html body.task-addressbook #contacts-table tr.selected,
+html body.task-addressbook #contacts-table tr:hover {
+  color: #fff !important;
+  background: #30435a !important;
+}
+
+html body.task-addressbook #contacts-table td {
+  padding: 8px 10px !important;
+  border: 0 !important;
+}
+
+html body.task-addressbook #contacts-table tr td:first-child {
+  border-radius: 8px 0 0 8px !important;
+}
+
+html body.task-addressbook #contacts-table tr td:last-child {
+  border-radius: 0 8px 8px 0 !important;
+}
+
+html body.task-addressbook #layout-content .iframe-wrapper,
+html body.task-settings #layout-content .iframe-wrapper {
+  width: calc(100% - 24px) !important;
+  height: calc(100% - 82px) !important;
+  margin: 12px !important;
+  background: var(--brand-panel) !important;
+  border: 1px solid var(--brand-line) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: var(--brand-shadow) !important;
+}
+
+html.iframe body.task-addressbook .formcontent,
+html.iframe body.task-settings .formcontent,
+html.iframe body.task-addressbook .propform,
+html.iframe body.task-settings .propform,
+html.iframe body.task-addressbook #layout-content,
+html.iframe body.task-settings #layout-content {
+  color: var(--brand-ink) !important;
+  background: var(--brand-panel) !important;
+}
+
+html.iframe body.task-addressbook .formcontent,
+html.iframe body.task-settings .formcontent {
+  margin: 14px !important;
+  padding: 18px !important;
+  border: 1px solid var(--brand-line) !important;
+  border-radius: 8px !important;
+}
+
+html.iframe body.task-addressbook .contact-header {
+  display: flex !important;
+  align-items: center !important;
+  gap: 18px !important;
+  padding-bottom: 16px !important;
+  border-bottom: 1px solid var(--brand-line) !important;
+}
+
+html.iframe body.task-addressbook .contact-photo,
+html.iframe body.task-addressbook #contactpic {
+  border-radius: 8px !important;
+  background: #202b39 !important;
+}
+
+html.iframe body.task-addressbook #contacthead {
+  min-width: 0 !important;
+}
+
+html.iframe body.task-addressbook #contacttabs {
+  margin-top: 16px !important;
+}
+
+html body.task-calendar #layout > #layout-content {
+  padding: 0 !important;
+}
+
+html body.task-calendar #layout-content > .header {
+  gap: 8px !important;
+}
+
+html body.task-calendar #calendartoolbar,
+html body.task-addressbook #addressbooktoolbar {
+  display: flex !important;
+  align-items: center !important;
+  gap: 4px !important;
+  width: 100% !important;
+  min-width: 0 !important;
+}
+
+html body.task-calendar #calendar {
+  position: absolute !important;
+  inset: 116px 12px 12px 12px !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0 !important;
+  color: var(--brand-ink) !important;
+  background: var(--brand-panel) !important;
+  border: 1px solid var(--brand-line) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: var(--brand-shadow) !important;
+}
+
+html body.task-calendar #layout-content > .searchbar {
+  height: 58px !important;
+  padding: 10px 14px !important;
+  background: var(--brand-paper) !important;
+  border-bottom: 1px solid var(--brand-line) !important;
+}
+
+html body.task-calendar .calendar-datepicker,
+html body.task-calendar .ui-datepicker-inline {
+  width: calc(100% - 20px) !important;
+  margin: 12px 10px 10px !important;
+  padding: 8px !important;
+  color: #edf4f8 !important;
+  background: rgba(255, 255, 255, .04) !important;
+  border: 1px solid rgba(255, 255, 255, .08) !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+}
+
+html body.task-calendar .ui-datepicker-inline a,
+html body.task-calendar .ui-datepicker-inline span {
+  color: inherit !important;
+}
+
+html body.task-calendar .ui-datepicker-inline table {
+  width: 100% !important;
+  table-layout: fixed !important;
+  font-size: 11px !important;
+}
+
+html body.task-calendar .ui-datepicker-inline th,
+html body.task-calendar .ui-datepicker-inline td {
+  padding: 2px !important;
+  text-align: center !important;
+}
+
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-title {
+  display: flex !important;
+  justify-content: center !important;
+  gap: 6px !important;
+  min-width: 0 !important;
+  padding: 0 0 8px !important;
+}
+
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-month,
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-year {
+  min-width: 0 !important;
+  height: 34px !important;
+  color: var(--brand-ink) !important;
+  background: #f8fbfd !important;
+  border: 1px solid rgba(255, 255, 255, .22) !important;
+  border-radius: 6px !important;
+}
+
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-month {
+  width: 62px !important;
+}
+
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-year {
+  width: 72px !important;
+}
+
+html body.task-calendar #calendarslist li,
+html body.task-calendar #calendarslist li > div,
+html body.task-calendar #calendarslist li > div > span,
+html body.task-calendar #calendarslist li > div > a,
+html body.task-calendar #calendarslist .calname,
+html body.task-calendar #calendarslist label,
+html body.task-calendar #calendarslist a {
+  color: #dbe6ed !important;
+}
+
+html body.task-calendar #calendarslist li.selected,
+html body.task-calendar #calendarslist li:hover,
+html body.task-calendar #calendarslist li.selected > div,
+html body.task-calendar #calendarslist li:hover > div,
+html body.task-calendar #calendarslist li.selected .calname,
+html body.task-calendar #calendarslist li:hover .calname,
+html body.task-calendar #calendarslist li.selected label,
+html body.task-calendar #calendarslist li:hover label,
+html body.task-calendar #calendarslist li.selected a,
+html body.task-calendar #calendarslist li:hover a {
+  color: #142024 !important;
+}
+
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-calendar td a,
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-calendar td span {
+  color: #172033 !important;
+}
+
+html body.task-calendar .ui-datepicker-inline .ui-datepicker-calendar th span {
+  color: #6fd4ff !important;
+}
+
+html body.task-calendar #calendarslist li,
+html body.task-calendar #calendarslist li > div,
+html body.task-calendar #calendarslist li > div > span,
+html body.task-calendar #calendarslist li > div > a,
+html body.task-calendar #calendarslist .calname,
+html body.task-calendar #calendarslist label,
+html body.task-calendar #calendarslist a {
+  color: #dbe6ed !important;
+}
+
+html body.task-calendar .ui-datepicker-inline .ui-state-active {
+  color: #142024 !important;
+  background: var(--brand-mint) !important;
+  border-radius: 6px !important;
+}
+
+html body.task-calendar .fc-toolbar,
+html body.task-calendar .fc-header-toolbar {
+  padding: 12px 14px !important;
+  margin: 0 !important;
+  background: var(--brand-panel) !important;
+  border-bottom: 1px solid var(--brand-line) !important;
+}
+
+html body.task-calendar .fc-view-container,
+html body.task-calendar .fc-view,
+html body.task-calendar .fc-widget-content,
+html body.task-calendar .fc-widget-header {
+  color: var(--brand-ink) !important;
+  background: var(--brand-panel) !important;
+  border-color: var(--brand-line) !important;
+}
+
+html body.task-calendar .fc-day-header {
+  padding: 10px 4px !important;
+  color: var(--brand-ink-soft) !important;
+  font-size: 12px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+}
+
+html body.task-calendar .fc-day-number {
+  padding: 8px !important;
+  color: var(--brand-ink) !important;
+  font-weight: 700 !important;
+}
+
+html body.task-calendar .fc-event {
+  border-radius: 6px !important;
+  box-shadow: none !important;
+}
+
+html body.task-settings #sections-table {
+  width: calc(100% - 20px) !important;
+  margin: 10px !important;
+  border-collapse: separate !important;
+  border-spacing: 0 6px !important;
+}
+
+html body.task-settings #sections-table tr,
+html body.task-settings #sections-table li {
+  color: var(--brand-ink) !important;
+  background: var(--brand-panel) !important;
+  border-radius: 8px !important;
+}
+
+html body.task-settings #sections-table tr.selected,
+html body.task-settings #sections-table tr:hover,
+html body.task-settings #sections-table li.selected,
+html body.task-settings #sections-table li:hover {
+  color: #fff !important;
+  background: #30435a !important;
+}
+
+@media screen and (max-width: 768px) {
+  html body.task-addressbook #layout > #layout-sidebar,
+  html body.task-calendar #layout > #layout-sidebar,
+  html body.task-settings #layout > #layout-sidebar,
+  html body.task-addressbook #layout > #layout-list,
+  html body.task-settings #layout > #layout-list {
+    width: 100% !important;
+    min-width: 0 !important;
+    max-width: none !important;
+  }
+
+  html body.task-calendar #calendar {
+    inset: 116px 8px 8px 8px !important;
+  }
+}
+
+html body.task-calendar #layout-sidebar #calendarslist li > div.calendar,
+html body.task-calendar #layout-sidebar #calendarslist li > div.calendar > a.calname {
+  color: #dbe6ed !important;
+}
+
+html body.task-calendar #layout-sidebar #calendarslist li.selected > div.calendar,
+html body.task-calendar #layout-sidebar #calendarslist li:hover > div.calendar {
+  background: rgba(219, 230, 237, .08) !important;
+  border-radius: 8px !important;
+}
+
+html body.task-calendar #layout-sidebar #calendarslist li.selected > div.calendar > a.calname,
+html body.task-calendar #layout-sidebar #calendarslist li:hover > div.calendar > a.calname {
+  color: #f4f8fb !important;
+}
