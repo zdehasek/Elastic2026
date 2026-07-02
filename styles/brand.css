@@ -542,6 +542,7 @@ html.dark-mode body.task-login .form-control::placeholder {
 
 html body.task-login .button.mainaction,
 html.dark-mode body.task-login .button.mainaction {
+  color: #ffffff !important;
   width: 100% !important;
   min-height: 50px;
   box-sizing: border-box;
@@ -780,4 +781,824 @@ body.task-login #login-form .form-control {
   html:not(.dark-mode) body.task-login #logo {
     width: 158px;
   }
+}
+
+/* Left rail and real light/dark modes for the 66c skin. */
+html:not(.dark-mode) {
+  --brand-ink: #172033;
+  --brand-ink-soft: #526071;
+  --brand-paper: #f5f7fb;
+  --brand-paper-2: #ffffff;
+  --brand-panel: #ffffff;
+  --brand-panel-hot: #eef3f8;
+  --brand-line: #d8e0ea;
+  --brand-coral: #d95268;
+  --brand-coral-dark: #be3e53;
+  --brand-amber: #f2b95d;
+  --brand-mint: #cfe5df;
+  --brand-mint-strong: #7baea5;
+  --brand-success: #5a9c8e;
+  --brand-success-soft: #cfe5df;
+  --brand-focus: #6b5fe8;
+  --brand-blue: #236ea3;
+  --brand-purple: #6b5fe8;
+  --brand-shadow: 0 18px 44px rgba(22, 32, 51, .12);
+}
+
+html.dark-mode {
+  --brand-ink: #f4f6fb;
+  --brand-ink-soft: #aeb8c8;
+  --brand-paper: #252d3b;
+  --brand-paper-2: #202836;
+  --brand-panel: #2b3445;
+  --brand-panel-hot: #314057;
+  --brand-line: #3a4659;
+  --brand-coral: #ff5c72;
+  --brand-coral-dark: #ef435c;
+  --brand-amber: #ffbe62;
+  --brand-mint: #b8d7d0;
+  --brand-mint-strong: #7fb7ad;
+  --brand-success: #3f9f8b;
+  --brand-success-soft: #8fd6c5;
+  --brand-focus: #7f68f2;
+  --brand-blue: #6fd4ff;
+  --brand-purple: #8068f2;
+  --brand-shadow: 0 18px 44px rgba(0, 0, 0, .28);
+}
+
+html:not(.dark-mode) body,
+html:not(.dark-mode) #layout,
+html:not(.dark-mode) #layout-content,
+html:not(.dark-mode) #layout-list,
+html:not(.dark-mode) #layout-sidebar,
+html:not(.dark-mode) .listbox,
+html:not(.dark-mode) .scroller,
+html:not(.dark-mode) .iframe-wrapper {
+  color: var(--brand-ink) !important;
+  background-color: var(--brand-paper) !important;
+}
+
+html:not(.dark-mode) .header,
+html:not(.dark-mode) #messagelist-header,
+html:not(.dark-mode) .footer,
+html:not(.dark-mode) .popupmenu,
+html:not(.dark-mode) .popover,
+html:not(.dark-mode) .ui-dialog,
+html:not(.dark-mode) .formcontent,
+html:not(.dark-mode) .propform,
+html:not(.dark-mode) .toolbar {
+  color: var(--brand-ink) !important;
+  background-color: var(--brand-paper-2) !important;
+  border-color: var(--brand-line) !important;
+}
+
+html:not(.dark-mode) .messagelist tr,
+html:not(.dark-mode) .listing li,
+html:not(.dark-mode) .fc-unthemed td,
+html:not(.dark-mode) .fc-unthemed th {
+  color: var(--brand-ink) !important;
+  background: var(--brand-panel) !important;
+  border-color: var(--brand-line) !important;
+}
+
+html:not(.dark-mode) .messagelist tr:nth-child(even) {
+  background: #f0f4f8 !important;
+}
+
+html:not(.dark-mode) .messagelist tr.unread {
+  color: #111827 !important;
+  background: #e9f0f7 !important;
+}
+
+html:not(.dark-mode) .messagelist tr:hover,
+html:not(.dark-mode) .messagelist tr.focused,
+html:not(.dark-mode) .messagelist tr.selected,
+html:not(.dark-mode) .listing li.selected,
+html:not(.dark-mode) .listing li.selected > div > *,
+html:not(.dark-mode) .fc-highlight {
+  color: #111827 !important;
+  background: #dde8f2 !important;
+}
+
+html:not(.dark-mode) input,
+html:not(.dark-mode) textarea,
+html:not(.dark-mode) select,
+html:not(.dark-mode) .form-control,
+html:not(.dark-mode) .custom-select,
+html:not(.dark-mode) .input-group-text {
+  color: var(--brand-ink) !important;
+  background: #ffffff !important;
+  border-color: var(--brand-line) !important;
+}
+
+html:not(.dark-mode) a,
+html:not(.dark-mode) .button,
+html:not(.dark-mode) .btn-link {
+  color: var(--brand-blue) !important;
+}
+
+html:not(.dark-mode) body.task-login #layout {
+  background:
+    linear-gradient(180deg, rgba(107, 95, 232, .08) 0, transparent 34%),
+    linear-gradient(135deg, #ffffff 0%, #f2f6fa 52%, #e9eff5 100%) !important;
+}
+
+html:not(.dark-mode) body.task-login #login-form {
+  color: var(--brand-ink) !important;
+  background: rgba(255, 255, 255, .9) !important;
+  border-color: rgba(23, 32, 51, .1) !important;
+  box-shadow: 0 22px 54px rgba(22, 32, 51, .16) !important;
+}
+
+html:not(.dark-mode) body.task-login .form-control {
+  background: #ffffff !important;
+  border-color: #d7e0ea !important;
+  box-shadow: 0 10px 24px rgba(22, 32, 51, .08) !important;
+}
+
+html:not(.dark-mode) body.task-login .button.mainaction {
+  background: linear-gradient(135deg, #6b5fe8, #d95268) !important;
+}
+
+html:not(.dark-mode) .watermark {
+  background-color: var(--brand-paper) !important;
+}
+
+html:not(.dark-mode) .watermark:before {
+  background: rgba(245, 247, 251, .76) !important;
+}
+
+html:not(.dark-mode).iframe body.task-mail.action-preview #layout-content,
+html:not(.dark-mode).iframe body.task-mail.action-preview .content,
+html:not(.dark-mode).iframe body.task-mail.action-preview #message-content,
+html:not(.dark-mode).iframe body.task-mail.action-preview #messagebody,
+html:not(.dark-mode).iframe body.task-mail.action-preview .rightcol,
+html:not(.dark-mode).iframe body.task-mail.action-preview .message-part {
+  color: var(--brand-ink) !important;
+  background: var(--brand-paper-2) !important;
+}
+
+html:not(.dark-mode).iframe body.task-mail.action-preview #message-header > .subject {
+  color: var(--brand-ink) !important;
+}
+
+html:not(.dark-mode).iframe body.task-mail.action-preview #message-header > .header {
+  color: var(--brand-ink) !important;
+  background: var(--brand-paper-2) !important;
+  border-color: var(--brand-line) !important;
+}
+
+#layout-sidebar {
+  position: relative !important;
+}
+
+#layout-sidebar > .brand-taskrail {
+  margin-left: 0 !important;
+}
+
+#layout-sidebar > :not(.brand-taskrail) {
+  margin-left: 84px !important;
+  width: calc(100% - 84px) !important;
+  max-width: calc(100% - 84px) !important;
+  box-sizing: border-box;
+}
+
+body.task-mail #layout-sidebar > .brand-sidebar-logo,
+body.task-mail #layout-sidebar > .header {
+  display: none !important;
+}
+
+.brand-taskrail {
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  z-index: 30;
+  display: flex !important;
+  flex-direction: column;
+  width: 84px !important;
+  min-width: 84px !important;
+  padding: 14px 0 12px;
+  color: #dbe7ef;
+  background: #1d282d !important;
+  border-right: 1px solid rgba(255, 255, 255, .12);
+}
+
+.brand-taskrail .menu {
+  display: flex !important;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100% !important;
+  background: transparent !important;
+}
+
+.brand-taskrail-bottom {
+  margin-top: auto;
+}
+
+.brand-taskrail a {
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 84px !important;
+  min-height: 58px;
+  padding: 7px 4px !important;
+  color: #dbe7ef !important;
+  line-height: 1.15;
+  text-align: center !important;
+  text-decoration: none !important;
+  border: 0 !important;
+  border-left: 3px solid transparent !important;
+  border-radius: 0 !important;
+  box-sizing: border-box;
+}
+
+.brand-taskrail a:before {
+  display: block !important;
+  width: auto !important;
+  height: 25px !important;
+  margin: 0 0 5px !important;
+  color: inherit !important;
+  font-family: Icons;
+  font-size: 20px !important;
+  line-height: 25px !important;
+  text-align: center !important;
+}
+
+.brand-taskrail a .inner {
+  display: block !important;
+  max-width: 76px;
+  color: inherit !important;
+  font-size: 12px !important;
+  font-weight: 500;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
+}
+
+.brand-taskrail a.compose:before { content: "\f044"; }
+.brand-taskrail a.mail:before { content: "\f0e0"; }
+.brand-taskrail a.contacts:before { content: "\f0c0"; }
+.brand-taskrail a.calendar:before,
+.brand-taskrail a.button-calendar:before { content: "\f073"; }
+.brand-taskrail a.settings:before { content: "\f013"; }
+.brand-taskrail a.theme.light:before { content: "\f185"; }
+.brand-taskrail a.theme.dark:before { content: "\f186"; }
+.brand-taskrail a.about:before { content: "\f128"; }
+.brand-taskrail a.logout:before { content: "\f011"; }
+
+.brand-taskrail a.selected,
+.brand-taskrail a:hover,
+.brand-taskrail a:focus {
+  color: #ffffff !important;
+  background: rgba(255, 255, 255, .08) !important;
+  border-left-color: #6fd4ff !important;
+  outline: none;
+}
+
+.brand-taskrail a.compose {
+  color: #6fd4ff !important;
+}
+
+.brand-taskrail a.logout {
+  color: #ff6d7f !important;
+}
+
+.brand-taskrail .quota-widget {
+  display: none !important;
+}
+
+#settings-menu li.about {
+  display: none !important;
+}
+
+html:not(.dark-mode) #layout-sidebar .header,
+html:not(.dark-mode) #layout-sidebar .scroller,
+html:not(.dark-mode) #layout-sidebar .listing,
+html:not(.dark-mode) #layout-sidebar .listing li,
+html:not(.dark-mode) #layout-sidebar .listing li > a,
+html:not(.dark-mode) #layout-sidebar .listing li > div > a,
+html:not(.dark-mode) #layout-sidebar .listing li > div > span,
+html:not(.dark-mode) #layout-sidebar .footer {
+  color: var(--brand-ink) !important;
+  background: transparent !important;
+  border-color: var(--brand-line) !important;
+}
+
+html.dark-mode #layout-sidebar .header,
+html.dark-mode #layout-sidebar .scroller,
+html.dark-mode #layout-sidebar .listing,
+html.dark-mode #layout-sidebar .listing li,
+html.dark-mode #layout-sidebar .listing li > a,
+html.dark-mode #layout-sidebar .listing li > div > a,
+html.dark-mode #layout-sidebar .listing li > div > span,
+html.dark-mode #layout-sidebar .footer {
+  color: var(--brand-ink) !important;
+  background: transparent !important;
+  border-color: rgba(244, 246, 251, .11) !important;
+}
+
+body.task-mail #mailboxlist li.mailbox.selected > a,
+body.task-mail #mailboxlist li.mailbox:hover > a,
+body.task-mail #mailboxlist li.mailbox.focused > a {
+  color: #c8ff2a !important;
+  background: #303a20 !important;
+  border-color: rgba(200, 255, 42, .45) !important;
+  box-shadow: inset 4px 0 0 #c8ff2a !important;
+}
+
+body.task-mail #mailboxlist li.mailbox.selected > a:before,
+body.task-mail #mailboxlist li.mailbox:hover > a:before,
+body.task-mail #mailboxlist li.mailbox.focused > a:before {
+  color: #c8ff2a !important;
+}
+
+/* Final 66c skin polish: keep the rail and light mode on one coherent palette. */
+html:not(.dark-mode) {
+  --brand-ink: #172033;
+  --brand-ink-soft: #5a687a;
+  --brand-paper: #f4f7fb;
+  --brand-paper-2: #ffffff;
+  --brand-panel: #ffffff;
+  --brand-panel-hot: #eaf1f7;
+  --brand-line: #d7e1eb;
+  --brand-rail: #f8fbfd;
+  --brand-rail-ink: #263345;
+  --brand-rail-muted: #607084;
+  --brand-rail-hot: #e7eff6;
+  --brand-blue: #236ea3;
+  --brand-purple: #6658df;
+  --brand-folder-green: #c8ff2a;
+  --brand-folder-green-ink: #314b00;
+  --brand-folder-green-bg: #efffd0;
+  --brand-folder-green-line: rgba(92, 126, 0, .34);
+}
+
+html.dark-mode {
+  --brand-ink: #f4f6fb;
+  --brand-ink-soft: #aeb8c8;
+  --brand-paper: #252d3b;
+  --brand-paper-2: #202836;
+  --brand-panel: #2b3445;
+  --brand-panel-hot: #314057;
+  --brand-line: #3a4659;
+  --brand-rail: #172126;
+  --brand-rail-ink: #dbe7ef;
+  --brand-rail-muted: #98a8b7;
+  --brand-rail-hot: rgba(255, 255, 255, .08);
+  --brand-blue: #6fd4ff;
+  --brand-purple: #8068f2;
+  --brand-folder-green: #c8ff2a;
+  --brand-folder-green-ink: #c8ff2a;
+  --brand-folder-green-bg: #303a20;
+  --brand-folder-green-line: rgba(200, 255, 42, .45);
+}
+
+html body,
+html #layout,
+html #layout-content,
+html #layout-list,
+html #layout-sidebar,
+html .listbox,
+html .scroller,
+html .iframe-wrapper {
+  color: var(--brand-ink) !important;
+  background-color: var(--brand-paper) !important;
+}
+
+html .header,
+html #messagelist-header,
+html .footer,
+html .toolbar,
+html .popupmenu,
+html .popover,
+html .ui-dialog,
+html .formcontent,
+html .propform,
+html .boxcontent,
+html .content,
+html .records-table {
+  color: var(--brand-ink) !important;
+  background-color: var(--brand-paper-2) !important;
+  border-color: var(--brand-line) !important;
+}
+
+html .messagelist tr,
+html .listing li,
+html .listing li > a,
+html .listing li > div > a,
+html .listing li > div > span,
+html .fc-unthemed td,
+html .fc-unthemed th {
+  color: var(--brand-ink) !important;
+  border-color: var(--brand-line) !important;
+}
+
+html:not(.dark-mode) .messagelist tr,
+html:not(.dark-mode) .listing li {
+  background: var(--brand-panel) !important;
+}
+
+html:not(.dark-mode) .messagelist tr:nth-child(even) {
+  background: #f0f4f8 !important;
+}
+
+html:not(.dark-mode) .messagelist tr.unread,
+html:not(.dark-mode) .messagelist tr:hover,
+html:not(.dark-mode) .messagelist tr.focused,
+html:not(.dark-mode) .messagelist tr.selected,
+html:not(.dark-mode) .listing li.selected {
+  color: #101827 !important;
+  background: var(--brand-panel-hot) !important;
+}
+
+html.dark-mode .messagelist tr,
+html.dark-mode .listing li {
+  background: var(--brand-paper) !important;
+}
+
+html.dark-mode .messagelist tr:nth-child(even) {
+  background: #232b39 !important;
+}
+
+html.dark-mode .messagelist tr.unread,
+html.dark-mode .messagelist tr:hover,
+html.dark-mode .messagelist tr.focused,
+html.dark-mode .messagelist tr.selected,
+html.dark-mode .listing li.selected {
+  color: #ffffff !important;
+  background: var(--brand-panel-hot) !important;
+}
+
+html input,
+html textarea,
+html select,
+html .form-control,
+html .custom-select,
+html .input-group-text {
+  color: var(--brand-ink) !important;
+  background: var(--brand-paper-2) !important;
+  border-color: var(--brand-line) !important;
+}
+
+html input::placeholder,
+html textarea::placeholder {
+  color: var(--brand-ink-soft) !important;
+  opacity: 1;
+}
+
+html #layout-sidebar > .brand-taskrail {
+  margin-left: 0 !important;
+  background:
+    linear-gradient(180deg, rgba(111, 212, 255, .08), transparent 34%),
+    var(--brand-rail) !important;
+  border-right: 1px solid var(--brand-line) !important;
+  box-shadow: 12px 0 32px rgba(0, 0, 0, .08);
+}
+
+html .brand-taskrail,
+html .brand-taskrail .menu {
+  color: var(--brand-rail-ink) !important;
+}
+
+html .brand-taskrail a {
+  color: var(--brand-rail-ink) !important;
+  min-height: 60px;
+  gap: 3px;
+}
+
+html .brand-taskrail a:before {
+  color: inherit !important;
+  opacity: .96;
+}
+
+html .brand-taskrail a .inner {
+  color: inherit !important;
+  font-weight: 650;
+}
+
+html .brand-taskrail a.selected,
+html .brand-taskrail a:hover,
+html .brand-taskrail a:focus {
+  color: var(--brand-rail-ink) !important;
+  background: var(--brand-rail-hot) !important;
+  border-left-color: var(--brand-blue) !important;
+}
+
+html.dark-mode .brand-taskrail a.selected,
+html.dark-mode .brand-taskrail a:hover,
+html.dark-mode .brand-taskrail a:focus {
+  color: #ffffff !important;
+}
+
+html .brand-taskrail a.compose {
+  color: var(--brand-blue) !important;
+}
+
+html .brand-taskrail a.logout {
+  color: #d95268 !important;
+}
+
+html.dark-mode .brand-taskrail a.logout {
+  color: #ff6d7f !important;
+}
+
+html .brand-taskrail a.theme {
+  color: var(--brand-rail-muted) !important;
+}
+
+body.task-mail #mailboxlist li.mailbox.selected > a,
+body.task-mail #mailboxlist li.mailbox:hover > a,
+body.task-mail #mailboxlist li.mailbox.focused > a {
+  color: var(--brand-folder-green-ink) !important;
+  background: var(--brand-folder-green-bg) !important;
+  border-color: var(--brand-folder-green-line) !important;
+  box-shadow: inset 4px 0 0 var(--brand-folder-green) !important;
+}
+
+body.task-mail #mailboxlist li.mailbox.selected > a:before,
+body.task-mail #mailboxlist li.mailbox:hover > a:before,
+body.task-mail #mailboxlist li.mailbox.focused > a:before {
+  color: var(--brand-folder-green) !important;
+}
+
+html.iframe body.task-mail.action-preview #layout-content,
+html.iframe body.task-mail.action-preview .content,
+html.iframe body.task-mail.action-preview #message-content,
+html.iframe body.task-mail.action-preview #messagebody,
+html.iframe body.task-mail.action-preview .rightcol,
+html.iframe body.task-mail.action-preview .message-part {
+  color: var(--brand-ink) !important;
+  background: var(--brand-paper-2) !important;
+}
+
+html.iframe body.task-mail.action-preview #message-header > .subject,
+html.iframe body.task-mail.action-preview #message-header > .header {
+  color: var(--brand-ink) !important;
+  background: var(--brand-paper-2) !important;
+  border-color: var(--brand-line) !important;
+}
+
+/* Keep the custom rail from stealing folder-list clicks. */
+html #layout-sidebar {
+  box-sizing: border-box !important;
+  padding-left: 84px !important;
+}
+
+html #layout-sidebar > .brand-taskrail {
+  left: 0 !important;
+  z-index: 20;
+  pointer-events: none;
+}
+
+html #layout-sidebar > .brand-taskrail a,
+html #layout-sidebar > .brand-taskrail button {
+  pointer-events: auto;
+}
+
+html #layout-sidebar > :not(.brand-taskrail) {
+  position: relative !important;
+  z-index: 2;
+  margin-left: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+html body.task-mail #folderlist-content,
+html body.task-mail #mailboxlist,
+html body.task-mail #mailboxlist li,
+html body.task-mail #mailboxlist a {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto !important;
+}
+
+html body.task-mail #mailboxlist a {
+  cursor: pointer;
+}
+
+html #greydiv:not(.fadeoff70create) {
+  pointer-events: none !important;
+}
+
+html #greydiv.fadeoff70create {
+  pointer-events: auto !important;
+}
+
+/* 66c shell fix: keep the primary rail outside task sidebars. */
+html {
+  --brand-nav-w: 84px;
+  --brand-dark-bg: #111926;
+  --brand-dark-panel: #1f2938;
+  --brand-dark-panel-2: #263244;
+  --brand-dark-line: #354255;
+  --brand-dark-text: #f5f7fb;
+  --brand-dark-muted: #b7c2d0;
+  --brand-light-bg: #f4f7fb;
+  --brand-light-panel: #ffffff;
+  --brand-light-panel-2: #eef3f8;
+  --brand-light-line: #d6e0ea;
+  --brand-light-text: #172033;
+  --brand-light-muted: #526071;
+  --brand-accent-blue: #6fd4ff;
+  --brand-folder-green: #c8ff2a;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail {
+  position: absolute !important;
+  inset: 0 auto 0 0 !important;
+  z-index: 40 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  width: var(--brand-nav-w) !important;
+  min-width: var(--brand-nav-w) !important;
+  padding: 12px 0 !important;
+  color: #dbe7ef !important;
+  background: #172126 !important;
+  border-right: 1px solid rgba(255, 255, 255, .1) !important;
+  pointer-events: none !important;
+}
+
+html:not(.dark-mode) body:not(.task-login) #layout > .brand-taskrail {
+  color: #243246 !important;
+  background: #f8fbfd !important;
+  border-right-color: var(--brand-light-line) !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail .menu {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+  background: transparent !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail .brand-taskrail-bottom {
+  margin-top: auto !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail a {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: var(--brand-nav-w) !important;
+  min-height: 58px !important;
+  padding: 7px 4px !important;
+  color: inherit !important;
+  line-height: 1.15 !important;
+  text-align: center !important;
+  text-decoration: none !important;
+  border: 0 !important;
+  border-left: 3px solid transparent !important;
+  border-radius: 0 !important;
+  pointer-events: auto !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail a:before {
+  display: block !important;
+  height: 24px !important;
+  margin: 0 0 5px !important;
+  color: inherit !important;
+  font-family: Icons !important;
+  font-size: 20px !important;
+  font-weight: normal !important;
+  line-height: 24px !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail a .inner {
+  display: block !important;
+  max-width: 76px !important;
+  color: inherit !important;
+  font-size: 12px !important;
+  font-weight: 650 !important;
+  line-height: 1.2 !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail a.selected,
+html body:not(.task-login) #layout > .brand-taskrail a:hover,
+html body:not(.task-login) #layout > .brand-taskrail a:focus {
+  color: #fff !important;
+  background: rgba(111, 212, 255, .12) !important;
+  border-left-color: var(--brand-accent-blue) !important;
+}
+
+html:not(.dark-mode) body:not(.task-login) #layout > .brand-taskrail a.selected,
+html:not(.dark-mode) body:not(.task-login) #layout > .brand-taskrail a:hover,
+html:not(.dark-mode) body:not(.task-login) #layout > .brand-taskrail a:focus {
+  color: var(--brand-light-text) !important;
+  background: #e7eff6 !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail a.compose {
+  color: var(--brand-accent-blue) !important;
+}
+
+html body:not(.task-login) #layout > .brand-taskrail a.logout {
+  color: #ff6d7f !important;
+}
+
+html body:not(.task-login) #layout-sidebar > .brand-taskrail {
+  display: none !important;
+}
+
+html body:not(.task-login) #layout > #layout-sidebar {
+  margin-left: var(--brand-nav-w) !important;
+  padding-left: 0 !important;
+}
+
+html body:not(.task-login) #layout > #layout-list,
+html body:not(.task-login) #layout > #layout-content {
+  margin-left: var(--brand-nav-w) !important;
+}
+
+html body.task-mail #layout > #layout-list,
+html body.task-mail #layout > #layout-content,
+html body.task-calendar #layout > #layout-content {
+  margin-left: 0 !important;
+}
+
+html body.task-mail.action-compose #layout > #layout-content {
+  margin-left: var(--brand-nav-w) !important;
+}
+
+html body.task-mail.action-compose #layout > #layout-sidebar.sidebar-right {
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+}
+
+html body:not(.task-login) #layout-sidebar > .column-resizer {
+  position: absolute !important;
+  top: 0 !important;
+  right: -3px !important;
+  left: auto !important;
+  z-index: 10 !important;
+  width: 6px !important;
+  height: 100% !important;
+  pointer-events: auto !important;
+}
+
+html body.task-mail.action-none #layout-sidebar > .brand-sidebar-logo,
+html body.task-mail.action-none #layout-sidebar > .header-title,
+html body.task-mail.action-none #layout-sidebar > .header,
+html body.task-mail.action-none #layout-sidebar > #aria-label-folderlist {
+  display: none !important;
+}
+
+html body.task-mail.action-none #folderlist-content,
+html body.task-mail.action-none #mailboxlist {
+  display: block !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding: 12px 10px !important;
+  background: transparent !important;
+  pointer-events: auto !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox {
+  margin: 0 0 8px !important;
+  background: transparent !important;
+  border: 0 !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox > a {
+  position: relative !important;
+  z-index: 3 !important;
+  display: flex !important;
+  align-items: center !important;
+  min-height: 40px !important;
+  padding: 9px 12px !important;
+  color: var(--brand-dark-muted) !important;
+  background: rgba(255, 255, 255, .035) !important;
+  border: 1px solid rgba(255, 255, 255, .08) !important;
+  border-radius: 8px !important;
+  box-shadow: none !important;
+  pointer-events: auto !important;
+}
+
+html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox > a {
+  color: var(--brand-light-muted) !important;
+  background: #ffffff !important;
+  border-color: var(--brand-light-line) !important;
+}
+
+html body.task-mail.action-none #mailboxlist li.mailbox.selected > a,
+html body.task-mail.action-none #mailboxlist li.mailbox:hover > a,
+html body.task-mail.action-none #mailboxlist li.mailbox.focused > a {
+  color: var(--brand-folder-green) !important;
+  background: #303a20 !important;
+  border-color: rgba(200, 255, 42, .4) !important;
+  box-shadow: inset 4px 0 0 var(--brand-folder-green) !important;
+}
+
+html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox.selected > a,
+html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox:hover > a,
+html:not(.dark-mode) body.task-mail.action-none #mailboxlist li.mailbox.focused > a {
+  color: #314b00 !important;
+  background: #efffd0 !important;
+  border-color: rgba(92, 126, 0, .34) !important;
+}
+
+html body.task-settings #settings-menu li > a,
+html body.task-addressbook #directorylist li > a,
+html body.task-calendar #calendars-content li > a,
+html body.task-calendar #calendarslist li > a {
+  border-radius: 8px !important;
 }
