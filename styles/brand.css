@@ -249,3 +249,21 @@ html.dark-mode .fc-event-dot {
   background: var(--brand-coral);
   border-color: #ff9b82;
 }
+
+body.task-login #login-form table,
+body.task-login #login-form tbody,
+body.task-login #login-form tr,
+body.task-login #login-form td.input {
+  display: block !important;
+  width: 100% !important;
+}
+
+body.task-login #login-form td.title {
+  display: none !important;
+}
+
+body.task-login #login-form .form-control {
+  width: 100% !important;
+  max-width: none !important;
+  border-radius: 8px !important;
+}
