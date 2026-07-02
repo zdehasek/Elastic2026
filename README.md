@@ -1,6 +1,8 @@
-# Elastic2025
-A dark theme based on [Elastic2022](https://github.com/seb1k/Elastic2022).
-Gmail stopping [message pulling from domains](https://support.google.com/mail/answer/16604719?hl=en) motivated me to create a replacement in RoundCube.  
+# Elastic2026
+
+A public fork of [Elastic2025](https://github.com/bijanbina/Elastic2025), which is a dark theme based on [Elastic2022](https://github.com/seb1k/Elastic2022).
+
+This fork keeps the original attribution and CC BY-SA 3.0 licensing, while serving as the custom Roundcube skin used for `mail.66c.dev`.
 
 ## [**DONATE**](https://www.paypal.com/donate/?hosted_button_id=N9LJWC4WH8ZJC) so we don't die. any amount help!
 
@@ -15,9 +17,9 @@ Gmail stopping [message pulling from domains](https://support.google.com/mail/an
 
 ## 🛠️ Installation
 
-1. Download the [Elastic2025 Theme](https://github.com/bijanbina/Elastic2025/archive/refs/heads/main.zip)
+1. Download the [Elastic2026 Theme](https://github.com/zdehasek/Elastic2026/archive/refs/heads/main.zip)
 2. Copy all of its content into your RoundCube installation inside the skin folder. The result should be something like
-    `<RoundCube>/skin/elsastic2025/*`
+    `<RoundCube>/skins/elastic2026/*`
 3. Enable the theme by going into the RoundCube `Settings > User Interface > Interface skin`
 4. Follow the [Tweaks page](TWEAKS.md) to get the exact result shown in the screenshots.
 
@@ -50,3 +52,10 @@ Notice a bug but don’t have time? Donate so we fix it:
 
 [Topic on the roundcube's forum](https://www.roundcubeforum.net/index.php/topic,29883.0.html)
 [Blog Post](https://blog.binaee.com/2026/02/elastic2025-roundcube-dark-theme/)
+
+## Attribution and License
+
+Elastic2026 is a fork of Elastic2025 by Sebastien Mille and Ben Binaee.
+Elastic2025 is based on Elastic2022 by Sebastien Mille.
+
+This theme is licensed under Creative Commons Attribution-ShareAlike 3.0.
