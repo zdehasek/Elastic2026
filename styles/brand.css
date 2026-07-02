@@ -288,7 +288,10 @@ html.dark-mode {
   --brand-coral: #ff5c72;
   --brand-coral-dark: #ef435c;
   --brand-amber: #ffbe62;
-  --brand-mint: #c8ff2a;
+  --brand-mint: #b8d7d0;
+  --brand-mint-strong: #7fb7ad;
+  --brand-success: #3f9f8b;
+  --brand-success-soft: #8fd6c5;
   --brand-focus: #7f68f2;
   --brand-blue: #6fd4ff;
   --brand-purple: #8068f2;
@@ -383,6 +386,14 @@ html.dark-mode #layout-sidebar .listing li:hover > a,
 html.dark-mode #layout-sidebar .listing li:hover > div > * {
   color: #111826;
   background: var(--brand-mint);
+}
+
+html #layout-sidebar .listing li.selected > a,
+html #layout-sidebar .listing li.selected > div > *,
+html.dark-mode #layout-sidebar .listing li.selected > a,
+html.dark-mode #layout-sidebar .listing li.selected > div > * {
+  border-color: var(--brand-mint-strong);
+  box-shadow: inset 4px 0 0 var(--brand-mint-strong);
 }
 
 html a,
@@ -682,6 +693,30 @@ html.dark-mode .fc-today,
 html.dark-mode body.task-calendar .ui-datepicker-inline .ui-datepicker-today a {
   color: #111826 !important;
   background: var(--brand-mint) !important;
+}
+
+html .ui.alert.alert-success > i.icon:before,
+html .ui.alert.boxconfirmation i.icon:before,
+html.dark-mode .ui.alert.alert-success > i.icon:before,
+html.dark-mode .ui.alert.boxconfirmation i.icon:before {
+  color: var(--brand-success-soft) !important;
+}
+
+html #messagestack .alert-success,
+html .ui.alert.boxconfirmation,
+html #swipe-action.horizontal.swipe-compose,
+html #swipe-action.horizontal.swipe-success,
+html #swipe-action.vertical > .swipe-container.swipe-compose,
+html #swipe-action.vertical > .swipe-container.swipe-success,
+html.dark-mode #messagestack .alert-success,
+html.dark-mode .ui.alert.boxconfirmation,
+html.dark-mode #swipe-action.horizontal.swipe-compose,
+html.dark-mode #swipe-action.horizontal.swipe-success,
+html.dark-mode #swipe-action.vertical > .swipe-container.swipe-compose,
+html.dark-mode #swipe-action.vertical > .swipe-container.swipe-success {
+  color: #fff !important;
+  background-color: var(--brand-success) !important;
+  border-color: var(--brand-success) !important;
 }
 
 html .watermark,
