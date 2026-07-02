@@ -6,9 +6,11 @@
 <style type="text/css">
 html, body { height: 100%; overflow: hidden; }
 body {
-  background: url(images/logo.svg) center no-repeat #fff;
-  background-size: 30%;
-  background-blend-mode: luminosity;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 214, 90, .22), transparent 32%),
+    url(images/logo-ai.png) center no-repeat #fff7e8;
+  background-size: auto, min(260px, 42vw);
+  background-blend-mode: normal;
 }
 html:not(.dark-mode) body:before {
   content: "";
@@ -17,11 +19,13 @@ html:not(.dark-mode) body:before {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, .85);
+  background: rgba(255, 247, 232, .62);
 }
 html.dark-mode > body {
-  background-color: #21292c;
-  background-blend-mode: soft-light;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(255, 214, 90, .13), transparent 32%),
+    url(images/logo-ai.png) center no-repeat #121927;
+  background-size: auto, min(260px, 42vw);
 }
 </style>
 <script>
